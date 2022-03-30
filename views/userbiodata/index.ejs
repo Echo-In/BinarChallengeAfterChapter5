@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+
+        <div class="container-fluid">
+            <div class="row">
+                <%- include('../partials/sidebar'); %>
+
+                    <main role="main" class="col-md-9 ms-sm-auto col-lg-10 pt-3 px-4">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                            <h1 class="h2">User Biodata</h1>
+                        </div>
+                        <a href="/profile/add">
+                            <button type="button" class="btn btn-primary mb-3">
+                                <span data-feather="plus"></span>
+                                Add New User Biodata
+                            </button>
+                        </a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User Name</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Middle Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Date of Birth</th>
+                                        <th scope="col">Birthplace</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% userprofiledt.forEach((userprofile)=> { %>
+                                        <tr>
+                                            <td>
+                                                <%= userprofile.user_game.username %>
+                                            </td>
+                                            <td>
+                                                <%= userprofile.firstname %>
+                                            </td>
+                                            <td>
+                                                <%= userprofile.middlename %>
+                                            </td>
+                                            <td>
+                                                <%= userprofile.lastname %>
+                                            </td>
+                                            <td>
+                                                <%= userprofile.dob %>
+                                            </td>
+                                            <td>
+                                                <%= userprofile.birthplace %>
+                                            </td>
+                                            <td>
+                                                <%= userprofile.email %>
+                                            </td>
+                                            <td>
+                                                <a href="/profile/edit/<%= userprofile.id %>">
+                                                    <button type="button" class="btn btn-warning mb-3">
+                                                        Edit
+                                                    </button>
+                                                </a>
+
+                                                <a href="/profile/delete/<%= userprofile.id %>">
+                                                    <button type="button" class="btn btn-danger mb-3">
+                                                        Delete
+                                                    </button>
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                        <% }); %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </main>
+            </div>
+        </div>
+
+        <%- include('../partials/script'); %>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+
+        <div class="container-fluid">
+            <div class="row">
+                <%- include('../partials/sidebar'); %>
+
+                    <main role="main" class="col-md-9 ms-sm-auto col-lg-10 pt-3 px-4">
+                        <div
+                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                            <h1 class="h2">Edit User Biodata</h1>
+                        </div>
+
+                        <form method="POST" action="/profile/update">
+                            <div class="mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" name="firstName" class="form-control"
+                                    value="<%= userprofiledt.firstname %>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Middle Name</label>
+                                <input type="text" name="middleName" class="form-control"
+                                    value="<%= userprofiledt.middlename %>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" name="lastName" class="form-control"
+                                    value="<%= userprofiledt.lastname %>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Date of Birth</label>
+                                <input type="datetime" name="dob" class="form-control"
+                                    value="<%= userprofiledt.dob %>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Birthplace</label>
+                                <input type="text" name="birthPlace" class="form-control"
+                                    value="<%= userprofiledt.birthplace %>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control"
+                                    value="<%= userprofiledt.email %>" />
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="hidden" name="id" min="1" class="form-control"
+                                    value="<%= userprofiledt.id %>" />
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Saved</button>
+                        </form>
+                    </main>
+            </div>
+        </div>
+
+        <%- include('../partials/script'); %>
+</body>
+
+</html>
