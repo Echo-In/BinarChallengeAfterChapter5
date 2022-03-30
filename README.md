@@ -1,1 +1,1 @@
-# BinarChallengeCHapter6
+# BinarChallengeChapter6
