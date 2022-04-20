@@ -12,7 +12,7 @@ module.exports = {
      * }], {});
     */
     await queryInterface.bulkInsert('user_game_history', [{
-      user_id: 3,
+      user_id: 2,
       score_result: 1,
       played_at: "2022-01-01",
       createdAt: new Date(). toISOString (),

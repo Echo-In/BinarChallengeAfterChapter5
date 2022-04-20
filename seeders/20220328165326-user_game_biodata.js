@@ -12,7 +12,7 @@ module.exports = {
      * }], {});
     */
     await queryInterface.bulkInsert('user_game_biodata', [{
-      user_id: 3,
+      user_id: 2,
       firstname: 'Xeppa',
       middlename: null,
       lastname: null,
