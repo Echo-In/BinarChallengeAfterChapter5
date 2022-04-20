@@ -18,7 +18,7 @@
                             <h1 class="h2">Add User Biodata</h1>
                         </div>
 
-                        <form method="POST" action="/profile/post">
+                        <form method="POST" action="/profile/create">
                             <div>
                                 <% if (error) { %>
                                     <div class="alert alert-danger" role="alert">
@@ -29,7 +29,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">User Name</label>
-                                <select class="form-select" data-style="btn-info" name="uUsername">
+                                <select class="form-select" data-style="btn-info" name="username">
                                     <optgroup label="Select User Name">
                                         <!-- <option value="">Select UserName</option> -->
                                         <% userList.forEach(function(userList){ %>

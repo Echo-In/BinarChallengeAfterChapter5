@@ -12,12 +12,12 @@ module.exports = {
      * }], {});
     */
     await queryInterface.bulkInsert('user_game_login_history', [{
-      user_id: 3,
+      user_id: 2,
       login_time: new Date(). toISOString (),
       createdAt: new Date(). toISOString (),
       updatedAt: new Date(). toISOString (),
     },{
-      user_id: 3,
+      user_id: 2,
       login_time: "1900-01-01",
       createdAt: new Date(). toISOString (),
       updatedAt: new Date(). toISOString (),

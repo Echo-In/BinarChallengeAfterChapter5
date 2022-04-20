@@ -1,0 +1,32 @@
+const express = require("express");
+const router = express.Router();
+
+
+
+
+const passport = require("../lib/passport");
+router.use(passport.initialize());
+router.use(passport.session());
+
+const restrict = require("../middlewares/restrict");
+
+
+const gamehistory = require("./game_history");
+const logingame = require("./login");
+const userbiodata = require("./user_biodata");
+const usergame = require("./user");
+const userAPI = require("./userAPI")
+
+
+
+
+// router.use("/login",restrict, logingame);
+// router.use("/game_history", restrict, gamehistory);
+// router.use("/user_biodata", restrict, userbiodata);
+// router.use("/user", restrict, usergame);
+router.use(userAPI);
+
+router.use(logingame, restrict);
+router.use(gamehistory, restrict);
+router.use(userbiodata, restrict);
+router.use(usergame, restrict);

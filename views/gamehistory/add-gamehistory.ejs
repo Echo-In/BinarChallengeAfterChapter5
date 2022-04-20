@@ -18,11 +18,11 @@
               <h1 class="h2">Add History Data</h1>
             </div>
 
-            <form method="POST" action="/history/post">
+            <form method="POST" action="/game/history/create">
               <div class="mb-3">
                 <label class="form-label">User Name</label>
                 <!-- <input type="number" name="userName" min="1" class="form-control" /> -->
-                <select class="form-select" data-style="btn-info" name="uUsername">
+                <select class="form-select" data-style="btn-info" name="username">
                   <optgroup label="Select UserName">
                     <!-- <option value="">Select UserName</option> -->
                     <% userList.forEach(function(userList){ %>
